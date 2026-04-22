@@ -2,9 +2,8 @@
 
 namespace WebApplication1.DTOs;
 
-public class RoomDto
+public class CreateRoomDto
 {
-    public int Id { get; set; }
     [MaxLength(25), Required]
     public string Name { get; set; } = string.Empty;
     [Required]

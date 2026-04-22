@@ -1,13 +1,15 @@
-﻿namespace WebApplication1.DTOs;
+﻿using System.ComponentModel.DataAnnotations;
 
-public class ReservationDto
+namespace WebApplication1.DTOs;
+
+public class CreateReservationDto
 {
-    public int Id { get; set; }
-    public int RoomId { get; set; } 
+    [MaxLength(25), Required]
     public string OrganizerName { get; set; } = string.Empty;
+    [MaxLength(25), Required]
     public string Topic { get; set; } = string.Empty;
     public DateTime Date { get; set; }
     public DateTime StartTime { get; set; }
-    public DateTime EndTime { get; set; }
+    [MaxLength(25), Required]
     public string Status { get; set; } = string.Empty;
 }
